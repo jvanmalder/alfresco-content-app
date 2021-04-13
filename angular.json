@@ -175,8 +175,8 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "app:build",
-            "port": 4200,
-            "host": "0.0.0.0",
+            "port": 8080,
+            "host": "localhost",
             "proxyConfig": "src/proxy.conf.js"
           },
           "configurations": {

@@ -1,11 +1,11 @@
 <div class="line">
-  <span tabindex="0" role="link" *ngIf="isFile" (click)="showPreview($event)" (keyup.enter)="showPreview($event)" class="link">
-    {{ name$ | async }}
-  </span>
-  <span tabindex="0" role="link" *ngIf="!isFile" (click)="navigate($event)" (keyup.enter)="navigate($event)" class="bold link">
-    {{ name$ | async }}
-  </span>
-  <span>{{ title$ | async }}</span>
+  <span
+    tabindex="0" role="link" *ngIf="isFile" (click)="showPreview($event)"
+    (keyup.enter)="showPreview($event)" class="link" [innerHTML]="name$ | async | highlight:nameHighlight"></span>
+  <span
+    tabindex="0" role="link" *ngIf="!isFile" (click)="navigate($event)"
+    (keyup.enter)="navigate($event)" class="bold link" [innerHTML]="name$ | async | highlight:nameHighlight"></span>
+  <span [innerHTML]="title$ | async | highlight:titleHighlight"></span>
 </div>
 
 <div *ngIf="description" class="line">{{ description }}</div>
@@ -28,4 +28,9 @@
 <div class="line">
   {{ 'APP.BROWSE.SEARCH.CUSTOM_ROW.LOCATION' | translate }}:
   <aca-location-link [context]="context"></aca-location-link>
+</div>
+
+<div *ngIf="textHighlight" class="line">
+  {{ 'APP.BROWSE.SEARCH.CUSTOM_ROW.CONTENT' | translate }}:
+  <span [innerHTML]="textHighlight"></span>
 </div>

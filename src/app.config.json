@@ -255,7 +255,8 @@
           "key": "score",
           "type": "SCORE",
           "field": "score",
-          "ascending": false
+          "ascending": false,
+          "label": "Score"
         }
       ]
     },
@@ -370,7 +371,28 @@
           }
         }
       }
-    ]
+    ],
+    "highlight": {
+      "prefix": "<highlight>",
+      "postfix": "</highlight>",
+      "mergeContiguous": true,
+      "fields": [
+        {
+          "field": "cm:title"
+        },
+        {
+          "field": "cm:name"
+        },
+        {
+          "field": "cm:content"
+        },
+        {
+          "field": "description",
+          "prefix": "(",
+          "postfix": ")"
+        }
+      ]
+    }
   },
   "search-headers": {
     "filterWithContains": true,
@@ -537,7 +559,8 @@
           "key": "score",
           "type": "SCORE",
           "field": "score",
-          "ascending": false
+          "ascending": false,
+          "label": "Score"
         }
       ]
     }

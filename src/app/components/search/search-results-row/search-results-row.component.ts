@@ -73,14 +73,13 @@ export class SearchResultsRowComponent implements OnInit, OnDestroy {
 
   private updateValues() {
     this.node = this.context.row.node;
-
     const { name, properties } = this.node.entry;
     const title = properties ? properties['cm:title'] : '';
 
     this.name$.next(name);
 
     if (title !== name) {
-      this.title$.next(title ? `( ${title} )` : '');
+      this.title$.next(title ? ` ( ${title} )` : '');
     }
   }
 
@@ -92,6 +91,51 @@ export class SearchResultsRowComponent implements OnInit, OnDestroy {
   get description(): string {
     const { properties } = this.node.entry;
     return properties ? properties['cm:description'] : '';
+  }
+
+  private propertyHighlight(property: string): string {
+    const { search } = this.context.row.node.entry;
+    const highlights = search?.highlight ? search.highlight : [];
+    let propertyHighlights = "";
+    for (let highlight of highlights) {
+      if (highlight['field'] === property) {
+        for (let snippet of highlight['snippets']) {
+          propertyHighlights += ` ${snippet.match(/(?<=<highlight>).+?(?=<\/highlight>)/gs).join(" ")}`;
+        }
+      }
+    }
+    if (propertyHighlights.length > 0) {
+      propertyHighlights = propertyHighlights.substring(1);
+    }
+    return propertyHighlights;
+  }
+
+  get titleHighlight(): string {
+    return this.propertyHighlight('cm:title');
+  }
+
+  get nameHighlight(): string {
+    return this.propertyHighlight('cm:name');
+  }
+
+  get textHighlight(): string {
+    const { search } = this.context.row.node.entry;
+    const highlights = search?.highlight ? search.highlight : [];
+    let textHighlights = "";
+    for (let highlight of highlights) {
+      if (highlight['field'] === 'cm:content') {
+        for (let snippet of highlight['snippets']) {
+          textHighlights += `<br/>...${
+            snippet
+              .replaceAll('<highlight>', '<span class="adf-highlight">')
+              .replaceAll('</highlight>', '</span>')}...`;
+        }
+      }
+    }
+    if (textHighlights.length > 0) {
+      textHighlights = textHighlights.substring(5);
+    }
+    return textHighlights;
   }
 
   get modifiedAt(): Date {

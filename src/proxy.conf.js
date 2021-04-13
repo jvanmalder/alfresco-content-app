@@ -1,11 +1,11 @@
 require('dotenv').config();
 
-const API_CONTENT_HOST = process.env.API_CONTENT_HOST || 'http://0.0.0.0:8080';
+const API_CONTENT_HOST = 'https://dms.openanalytics.eu'; // process.env.API_CONTENT_HOST || 'http://0.0.0.0:8080';
 
 module.exports = {
   '/alfresco': {
     target: API_CONTENT_HOST,
-    secure: false,
+    secure: true,
     changeOrigin: true,
     // workaround for REPO-2260
     onProxyRes: function (proxyRes) {
@@ -17,7 +17,7 @@ module.exports = {
   },
   '/auth': {
     target: API_CONTENT_HOST,
-    secure: false,
+    secure: true,
     changeOrigin: true
   }
 };
