@@ -100,7 +100,7 @@ export class SearchResultsRowComponent implements OnInit, OnDestroy {
     for (let highlight of highlights) {
       if (highlight['field'] === property) {
         for (let snippet of highlight['snippets']) {
-          propertyHighlights += ` ${snippet.match(/(?<=<highlight>).+?(?=<\/highlight>)/gs).join(" ")}`;
+          propertyHighlights += ` ${snippet.match(/(?<=(<hig|^)hlight>).+?(?=<\/highlight>)/gs).join(" ")}`;
         }
       }
     }
@@ -128,7 +128,8 @@ export class SearchResultsRowComponent implements OnInit, OnDestroy {
           textHighlights += `<br/>...${
             snippet
               .replaceAll('<highlight>', '<span class="adf-highlight">')
-              .replaceAll('</highlight>', '</span>')}...`;
+              .replaceAll('</highlight>', '</span>')
+              .replaceAll('hlight>', '<span class="adf-highlight">')}...`;
         }
       }
     }
