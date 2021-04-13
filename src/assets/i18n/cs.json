@@ -171,7 +171,8 @@
           "MODIFIED": "Změněno",
           "BY_USER": "od {{ user }}",
           "LOCATION": "Umístění",
-          "SIZE": "Velikost"
+          "SIZE": "Velikost",
+          "CONTENT": "Obsah"
         },
         "UNKNOWN_LOCATION": "Neznámé",
         "NO_RESULTS": "Parametrům hledání odpovídá 0 výsledků",

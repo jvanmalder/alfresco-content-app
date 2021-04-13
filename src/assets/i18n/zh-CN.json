@@ -171,7 +171,8 @@
           "MODIFIED": "已修改",
           "BY_USER": "由 {{ user }}",
           "LOCATION": "位置",
-          "SIZE": "大小"
+          "SIZE": "大小",
+          "CONTENT": "內容"
         },
         "UNKNOWN_LOCATION": "未知",
         "NO_RESULTS": "您的搜索返回了 0 个结果",

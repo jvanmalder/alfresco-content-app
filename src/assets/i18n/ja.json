@@ -171,7 +171,8 @@
           "MODIFIED": "変更日",
           "BY_USER": "変更者: {{ user }}",
           "LOCATION": "場所",
-          "SIZE": "サイズ"
+          "SIZE": "サイズ",
+          "CONTENT": "コンテンツ"
         },
         "UNKNOWN_LOCATION": "不明",
         "NO_RESULTS": "検索結果は 0 件です",

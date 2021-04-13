@@ -171,7 +171,8 @@
           "MODIFIED": "Ændret",
           "BY_USER": "af {{ user }}",
           "LOCATION": "Placering",
-          "SIZE": "Størrelse"
+          "SIZE": "Størrelse",
+          "CONTENT": "Indhold"
         },
         "UNKNOWN_LOCATION": "Ukendt",
         "NO_RESULTS": "Der blev ikke fundet nogen søgeresultater",

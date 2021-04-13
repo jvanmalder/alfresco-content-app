@@ -171,7 +171,8 @@
           "MODIFIED": "Aangepast",
           "BY_USER": "door {{ user }}",
           "LOCATION": "Locatie",
-          "SIZE": "Grootte"
+          "SIZE": "Grootte",
+          "CONTENT": "Inhoud"
         },
         "UNKNOWN_LOCATION": "Onbekend",
         "NO_RESULTS": "Uw zoekopdracht heeft 0 resultaten opgeleverd",

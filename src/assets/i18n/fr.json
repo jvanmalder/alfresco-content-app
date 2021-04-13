@@ -171,7 +171,8 @@
           "MODIFIED": "Modifié",
           "BY_USER": "par {{ user }}",
           "LOCATION": "Emplacement",
-          "SIZE": "Taille"
+          "SIZE": "Taille",
+          "CONTENT": "Contenu"
         },
         "UNKNOWN_LOCATION": "Inconnu",
         "NO_RESULTS": "Votre recherche a renvoyé 0 résultat",

@@ -171,7 +171,8 @@
           "MODIFIED": "Zmodyfikowane",
           "BY_USER": "przez: {{ user }}",
           "LOCATION": "Lokalizacja",
-          "SIZE": "Rozmiar"
+          "SIZE": "Rozmiar",
+          "CONTENT": "Zawartoś"
         },
         "UNKNOWN_LOCATION": "Nieznane",
         "NO_RESULTS": "Wyszukiwanie nie zwróciło żadnych wyników",

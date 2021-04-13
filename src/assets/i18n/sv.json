@@ -171,7 +171,8 @@
           "MODIFIED": "Ändrad",
           "BY_USER": "av {{ user }}",
           "LOCATION": "Plats",
-          "SIZE": "Storlek"
+          "SIZE": "Storlek",
+          "CONTENT": "Innehåll"
         },
         "UNKNOWN_LOCATION": "Okänd",
         "NO_RESULTS": "Din sökning gav inga resultat",

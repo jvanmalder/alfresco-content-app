@@ -171,7 +171,8 @@
           "MODIFIED": "Muokattu",
           "BY_USER": "{{ user }}",
           "LOCATION": "Sijainti",
-          "SIZE": "Koko"
+          "SIZE": "Koko",
+          "CONTENT": "Sisältö"
         },
         "UNKNOWN_LOCATION": "Tuntematon",
         "NO_RESULTS": "Hakusi ei tuottanut yhtään tulosta",

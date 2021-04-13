@@ -171,7 +171,8 @@
           "MODIFIED": "Endret",
           "BY_USER": "av {{ user }}",
           "LOCATION": "Sted",
-          "SIZE": "Størrelse"
+          "SIZE": "Størrelse",
+          "CONTENT": "Innhold"
         },
         "UNKNOWN_LOCATION": "Ukjent",
         "NO_RESULTS": "Søket ditt ga 0 resultater",

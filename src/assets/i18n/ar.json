@@ -171,7 +171,8 @@
           "MODIFIED": "تم التعديل",
           "BY_USER": "بواسطة {{ user }}",
           "LOCATION": "مكان",
-          "SIZE": "الحجم"
+          "SIZE": "الحجم",
+          "CONTENT": "محتوى"
         },
         "UNKNOWN_LOCATION": "غير معروف",
         "NO_RESULTS": "أرجع البحث 0 نتائج",
